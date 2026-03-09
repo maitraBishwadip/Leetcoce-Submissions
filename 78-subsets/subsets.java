@@ -12,13 +12,14 @@ class Solution {
 
    public void subset(int index , List<Integer> current , List<List<Integer>> res, int[] nums)
     {
-          res.add(new ArrayList<>(current));
+         res.add(new ArrayList<>(current) );
 
-          for(int i = index; i<nums.length; i++)
-          {
+         for(int i = index; i< nums.length; i++)
+         {
             current.add(nums[i]);
-            subset(i+1,current, res, nums);
+            subset(i+1,current,res, nums);
             current.remove(current.size()-1);
-          }
+            
+         }
     }
 }
