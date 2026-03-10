@@ -14,6 +14,7 @@ class Solution {
     if(target == 0)
     {
         res.add(new ArrayList<>(candidate));
+        return ;
     }else if(target < 0)
     {
         return ; 
